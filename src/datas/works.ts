@@ -1,6 +1,8 @@
 import liberchatLogo from "./assets/liberchat-logo.svg"
 import liberchatSs from "./assets/liberchat-ss.jpg"
 import nakasyouSiteSs from "./assets/nakasyou-site-ss.png"
+import resxSs from "./assets/resx-ss.png"
+import estoyohimeSs from "./assets/estoyohime-ss.png"
 
 export interface Work {
   title: string
@@ -23,5 +25,19 @@ export const works: Work[] = [
     desc: "自分のウェブサイトを、Astro/TailwindCSSを用いて作りました。最初はNuxtJSでした。",
     url: "https://nakasyou.github.io",
     source: "https://github.com/nakasyou/nakasyou.github.io",
+  },
+  {
+    title: "Resx",
+    images: [resxSs],
+    desc: "Denoで、レスポンスを簡単に作成できるライブラリです。",
+    url: "https://deno.land/x/resx",
+    source: "https://github.com/nakasyou/resx",
+  },
+  {
+    title: "esToyohime",
+    images: [estoyohimeSs],
+    desc: "Viteの存在を知らなかっとときに作った、Viteのlibモードみたいに開発できるツールです。Denoで作られています。",
+    url: "https://deno.land/x/estoyohime",
+    source: "https://github.com/nakasyou/esToyohime",
   }
 ]
