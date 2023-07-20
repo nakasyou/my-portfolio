@@ -1,15 +1,52 @@
 ---
----
+import BaseLayout from "../layouts/Base.astro"
+import nakasyouIcon from "../assets/nakasyou.png"
+import { works } from "../datas/works"
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+---
+<BaseLayout title="nakasyou's Portfolio">
+  <div>
+    <div class="text-center">
+      <div class="text-3xl font-mono my-4 top-0 sticky bg-white opacity-60 op z-10">nakasyou's Portfolio</div>
+      <div class="flex justify-center content-center gap-4 my-4">
+        <div>
+          <img src={nakasyouIcon} class="w-40 rounded-full drop-shadow-lg" />
+        </div>
+        <div class="my-auto text-2xl">nakasyou</div>
+      </div>
+      <div>
+        <ul class="list-disc">
+          <li>名前: Shotaro Nakamura</li>
+        </ul>
+      </div>
+      <div class="my-4">
+        <div class="text-2xl font-bold">作ったもの</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {
+            works.map((work, index) => {
+              return <div class="border-2 rounded-md border-inherit drop-shadow-md bg-white">
+                <div class="text-xl">{ work.title }</div>
+                <div class="p-5">
+                  <img src={ work.images[0]} alt={`${work.title}のサムネイル`} />
+                </div>
+                <div>{ work.desc }</div>
+                <div>
+                  <a href={`/works/${index}`} class="link">Show details→</a>
+                </div>
+              </div>
+            })
+          }
+        </div>
+
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  .link {
+    @apply cursor-pointer underline;
+  }
+  .link:hover {
+    @apply no-underline [@media(hover:hover)]:hover:underline;
+  }
+</style>
