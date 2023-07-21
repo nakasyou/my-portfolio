@@ -39,5 +39,12 @@ export const works: Work[] = [
     desc: "Viteの存在を知らなかっとときに作った、Viteのlibモードみたいに開発できるツールです。Denoで作られています。",
     url: "https://deno.land/x/estoyohime",
     source: "https://github.com/nakasyou/esToyohime",
+  },
+  {
+    title: "Super Kamiokande 3D Monitor",
+    images: [kamiokandeSs],
+    desc: "スーパーカミオカンデのリアルタイムモニタを、3Dにしました。元画像の仕様が変更されたのか、現在はズレています。",
+    url: "https://nakasyou.github.io/kamiokande/",
+    source: "https://github.com/nakasyou/kamiokande",
   }
 ]
