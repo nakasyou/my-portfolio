@@ -6,6 +6,7 @@ import estoyohimeSs from "./assets/estoyohime-ss.png"
 import kamiokandeSs from "./assets/kamiokande-3d-ss.png"
 import planetsSs from "./assets/planets-ss.png"
 import colorPlanetsSs from "./assets/color-planets-ss.png"
+import liberlunaSiteSs from "./assets/liberluna-site-ss.png"
 
 export interface Work {
   title: string
@@ -63,5 +64,12 @@ export const works: Work[] = [
     desc: "Planetsを改良して、色をつけたり、動かしたりといろいろしました。こちらも、3Dレンダリングの計算は自分で書いています。",
     url: "https://nakasyou.github.io/color-planets/",
     source: "https://github.com/nakasyou/color-planets",
-  }
+  },
+  {
+    title: "Liberlunaのサイト",
+    images: [liberlunaSiteSs],
+    desc: "「ハッカー」サークル、「Liberluna」のウェブサイトをAstroで作りました。",
+    url: "https://liberluna.github.io",
+    source: "https://github.com/liberluna/liberluna.github.io",
+  },
 ]
