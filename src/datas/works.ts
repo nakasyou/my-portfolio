@@ -7,6 +7,7 @@ import kamiokandeSs from "./assets/kamiokande-3d-ss.png"
 import planetsSs from "./assets/planets-ss.png"
 import colorPlanetsSs from "./assets/color-planets-ss.png"
 import liberlunaSiteSs from "./assets/liberluna-site-ss.png"
+import patchouliSs from "./assets/patchouli-ss.png"
 
 export interface Work {
   title: string
@@ -71,5 +72,12 @@ export const works: Work[] = [
     desc: "「ハッカー」サークル、「Liberluna」のウェブサイトをAstroで作りました。",
     url: "https://liberluna.github.io",
     source: "https://github.com/liberluna/liberluna.github.io",
+  },
+  {
+    title: "Patchouli",
+    images: [patchouliSs],
+    desc: "Python製のLINEでエクスポートしたトーク履歴のパーザーです。",
+    url: "https://github.com/nakasyou/patchouli",
+    source: "https://github.com/nakasyou/patchouli",
   },
 ]
