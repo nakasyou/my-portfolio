@@ -3,7 +3,7 @@ import liberchatSs from "./assets/liberchat-ss.jpg"
 import nakasyouSiteSs from "./assets/nakasyou-site-ss.png"
 import resxSs from "./assets/resx-ss.png"
 import estoyohimeSs from "./assets/estoyohime-ss.png"
-import kamiokandeSs from "./assets/kamiokande-ss.png"
+import kamiokandeSs from "./assets/kamiokande-3d-ss.png"
 
 export interface Work {
   title: string
