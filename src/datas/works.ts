@@ -4,6 +4,8 @@ import nakasyouSiteSs from "./assets/nakasyou-site-ss.png"
 import resxSs from "./assets/resx-ss.png"
 import estoyohimeSs from "./assets/estoyohime-ss.png"
 import kamiokandeSs from "./assets/kamiokande-3d-ss.png"
+import planetsSs from "./assets/planets-ss.png"
+import colorPlanetsSs from "./assets/color-planets-ss.png"
 
 export interface Work {
   title: string
@@ -47,5 +49,19 @@ export const works: Work[] = [
     desc: "スーパーカミオカンデのリアルタイムモニタを、3Dにしました。元画像の仕様が変更されたのか、現在はズレています。",
     url: "https://nakasyou.github.io/kamiokande/",
     source: "https://github.com/nakasyou/kamiokande",
+  },
+  {
+    title: "Planets",
+    images: [planetsSs],
+    desc: "2Dの描画ライブラリ、PixiJSを用いた3Dの星々です。3Dレンダリングの計算は自分で書いています。",
+    url: "https://nakasyou.github.io/planets/",
+    source: "https://github.com/nakasyou/planets",
+  },
+  {
+    title: "Color Planets",
+    images: [colorPlanetsSs],
+    desc: "Planetsを改良して、色をつけたり、動かしたりといろいろしました。こちらも、3Dレンダリングの計算は自分で書いています。",
+    url: "https://nakasyou.github.io/color-planets/",
+    source: "https://github.com/nakasyou/color-planets",
   }
 ]
