@@ -8,6 +8,7 @@ import planetsSs from "./assets/planets-ss.png"
 import colorPlanetsSs from "./assets/color-planets-ss.png"
 import liberlunaSiteSs from "./assets/liberluna-site-ss.png"
 import patchouliSs from "./assets/patchouli-ss.png"
+import migawarispeakerImg from "./assets/migawarispeaker-img.jpg"
 
 export interface Work {
   title: string
@@ -76,8 +77,15 @@ export const works: Work[] = [
   {
     title: "Patchouli",
     images: [patchouliSs],
-    desc: "Python製のLINEでエクスポートしたトーク履歴のパーザーです。",
+    desc: "Python製の、LINEでエクスポートしたトーク履歴のパーザーです。",
     url: "https://github.com/nakasyou/patchouli",
     source: "https://github.com/nakasyou/patchouli",
+  },
+  {
+    title: "MigawariSpeaker",
+    images: [migawarispeakerImg],
+    desc: "矯正器具が舌に当たってしゃべると痛いので、VIVANT のドラムが使うように代わりにしゃべってくれるアプリを作りました。",
+    url: "https://nakasyou.github.io/migawari-speaker/",
+    source: "https://github.com/nakasyou/migawari-speaker",
   },
 ]
