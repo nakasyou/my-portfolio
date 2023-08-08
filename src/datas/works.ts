@@ -9,6 +9,8 @@ import colorPlanetsSs from "./assets/color-planets-ss.png"
 import liberlunaSiteSs from "./assets/liberluna-site-ss.png"
 import patchouliSs from "./assets/patchouli-ss.png"
 import migawarispeakerImg from "./assets/migawarispeaker-img.jpg"
+import transSiteSs from "./assets/trans-site-ss.png"
+import firecrxLogo from "./assets/firecrx.svg"
 
 export interface Work {
   title: string
@@ -77,7 +79,7 @@ export const works: Work[] = [
   {
     title: "Patchouli",
     images: [patchouliSs],
-    desc: "Python製の、LINEでエクスポートしたトーク履歴のパーザーです。",
+    desc: "Python製の、LINEでエクスポートしたトーク履歴のパーサーです。",
     url: "https://github.com/nakasyou/patchouli",
     source: "https://github.com/nakasyou/patchouli",
   },
@@ -88,4 +90,19 @@ export const works: Work[] = [
     url: "https://nakasyou.github.io/migawari-speaker/",
     source: "https://github.com/nakasyou/migawari-speaker",
   },
+  {
+    title: "TRANsのサイト",
+    images: [transSiteSs],
+    desc: "生徒会情報機構、という集団のウェブサイトを作ってあげました。",
+    url: "https://dev-trans.github.io",
+    source: "https://github.com/dev-trans/dev-trans.github.io"
+  },
+  {
+    title: "FireCws",
+    images: [firecrxLogo],
+    desc: "Firefoxで、Chromeウェブストアから拡張機能をインストールできるようにするブラウザ拡張機能です。",
+    url: "https://github.com/nakasyou/FireCws",
+    source: "https://github.com/nakasyou/FireCws"
+  },
+  
 ]
