@@ -10,7 +10,7 @@ import liberlunaSiteSs from "./assets/liberluna-site-ss.png"
 import patchouliSs from "./assets/patchouli-ss.png"
 import migawarispeakerImg from "./assets/migawarispeaker-img.jpg"
 import transSiteSs from "./assets/trans-site-ss.png"
-import firecrxLogo from "./assets/firecrx.svg"
+import fireCws from "./assets/firecws-logo.svg"
 
 export interface Work {
   title: string
@@ -99,8 +99,8 @@ export const works: Work[] = [
   },
   {
     title: "FireCws",
-    images: [firecrxLogo],
-    desc: "Firefoxで、Chromeウェブストアから拡張機能をインストールできるようにするブラウザ拡張機能です。",
+    images: [fireCws],
+    desc: "Firefoxで、Chromeウェブストアから拡張機能をインストールできるようにするブラウザ拡張機能及びコンパイラーです。",
     url: "https://github.com/nakasyou/FireCws",
     source: "https://github.com/nakasyou/FireCws"
   },

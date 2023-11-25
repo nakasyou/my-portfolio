@@ -6,35 +6,83 @@ import {
   IconBrandGithub,
   IconBrandTwitter
 } from '@tabler/icons-preact'
+import { siZenn } from 'simple-icons'
+import { Image } from 'astro:assets'
 ---
 <BaseLayout title="nakasyou's Portfolio">
   <div>
-    <div class="text-center">
-      <div class="text-3xl font-mono my-4 top-0 sticky bg-white opacity-60 op z-10">nakasyou's Portfolio</div>
-      <div class="flex justify-center content-center gap-4 my-4">
+    <div class="">
+      <div class="text-3xl font-mono my-4 top-0 sticky bg-white opacity-60 op z-10 text-center">nakasyou's Portfolio</div>
+      <div class="flex justify-center content-center items-center gap-4 my-4">
         <div>
-          <img src={nakasyouIcon} class="w-40 rounded-full drop-shadow-lg" />
+          <Image alt="my icon" src={nakasyouIcon} class="w-40 rounded-full drop-shadow-lg" />
         </div>
-        <div class="my-auto text-2xl">nakasyou</div>
+        <div>
+          <div class="my-auto text-2xl ml-2">nakasyou</div>
+          <hr />
+          <div class="text-lg text-slate-500 mx-2">Shotaro Nakamura</div>
+        </div>
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center my-2 items-center">
         <div class="social"><a href="https://github.com/nakasyou"><IconBrandGithub /></a></div>
         <div class="social"><a href="https://twitter.com/nakasyou0"><IconBrandTwitter /></a></div>
+        <div class="social shrink-0"><a href="https://zenn.dev/nakasyou">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000" class="w-5 h-5">
+            <path d={siZenn.path} fill="#000" />
+          </svg>
+        </a></div>
       </div>
-      <div>
+      <div class="my-2 text-center">
         <ul class="list-disc">
-          <li>名前: Shotaro Nakamura</li>
+          <li>中村 承太郎</li>
         </ul>
+        <div class="flex gap-2 justify-center">
+          {
+            ['中2', '男子', '14 y/o'].map((data, i) => <>
+              {
+                i !== 0 && <span>/</span>
+              }
+              <div class="">{ data }</div>
+            </>)
+          }
+        </div>
       </div>
-      <div class="my-4">
-        <div class="text-2xl font-bold">作ったもの</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-5 gap-4">
+      <div class="text-2xl font-bold my-1 text-center">Stacks</div>
+      <div class="grid justify-center">
+        <table class="">
+          <tr>
+            <td class="font-bold text-right mr-2 align-middle">Languages:</td>
+            <td class="flex flex-wrap gap-2 mx-2 align-middle">
+              <div>Japanese</div>
+              <div>Python</div>
+              <div>TypeScript</div>
+              <div>HTML/CSS</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="font-bold shrink-0 text-right mr-2 align-middle"><div class="mr-1">Web librarys and</div>frameworks:</td>
+            <td class="flex text-left gap-2 flex-wrap justufy-center mx-2 align-middle items-center">
+              <div>Astro</div>
+              <div>SolidJS</div>
+              <div>Hono</div>
+              <div>NuxtJS</div>
+              <div>Next.js</div>
+              <div>React</div>
+              <div>Svelte</div>
+              <div>Vue.js</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="my-4 text-center">
+        <div class="text-2xl font-bold my-1">Works</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mx-5 gap-4">
           {
             works.map((work, index) => {
-              return <div class="border-2 rounded-md border-inherit drop-shadow-md bg-white">
+              return <div class="border rounded-md border-inherit hover:drop-shadow-md bg-white p-2">
                 <div class="text-xl">{ work.title }</div>
                 <div class="p-5">
-                  <img src={ work.images[0]} alt={`${work.title}のサムネイル`} />
+                  <Image src={ work.images[0]} alt={`${work.title}のサムネイル`} />
                 </div>
                 <div>{ work.desc }</div>
                 <div>
@@ -57,6 +105,6 @@ import {
     @apply no-underline [@media(hover:hover)]:hover:underline;
   }
   .social {
-    @apply hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md;
+    @apply hover:-translate-y-0.5 transition-transform hover:scale-110 hover:drop-shadow-md;
   }
 </style>
